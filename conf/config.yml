@@ -1,0 +1,21 @@
+project: resnet-training
+
+data:
+    data_dir: '/inputs/cifar10'
+
+model:
+    model_name: resnet18
+
+training:
+    train_batch_size: 32
+    eval_batch_size: 32
+    num_epochs: 50
+    checkpoint_every: 150
+    max_train_steps_per_epoch: 600
+    # Optimizer
+    lr: 1e-3
+    weight_decay: 1e-1
+    momentum: 0.9
+    # LR Scheduler
+    lr_warmup_steps: 10
+    lr_scheduler: linear # ["linear", "cosine", "cosine_with_restarts", "polynomial", "constant", "constant_with_warmup"]
