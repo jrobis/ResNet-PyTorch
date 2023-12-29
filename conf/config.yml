@@ -5,6 +5,7 @@ data:
 
 model:
     model_name: resnet18
+    output_dir: models
 
 training:
     train_batch_size: 32
